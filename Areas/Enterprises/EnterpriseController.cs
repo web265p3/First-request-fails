@@ -15,7 +15,7 @@ namespace DH.Enterprises.WebApi.Areas.Sites
     public class EnterpriseController : Controller
     {  
         [HttpGet]
-        [Authorize]
+        [Authorize(Policy = "Read")]
         [Route("customers")]
         public IActionResult GetCustomersAsync()
         {
